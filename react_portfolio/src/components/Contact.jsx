@@ -1,74 +1,44 @@
 import { Container, Row, Col } from 'react-bootstrap'
-import { useState } from 'react'
-import { validateEmail } from '../utils/helper';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import '../style/Contact.css'
 
-export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const handleInputChange = (e) => {
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+export default function ContactUs() {
+  const form = useRef();
 
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'name') {
-      setName(inputValue);
-    } else {
-      setMessage(inputValue);
-    }
-  };
-
-  const handleFormSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setErrorMessage('Email is invalid');
-      return;
-    }
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    emailjs.sendForm('service_ejsuqqe', 'template_0mw6pik', form.current, 'Xv12kKXdI-_SFF7BI')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
   };
-    return (
-      <Container fluid>
-        <Row className='justify-content-between align-items-center'>
-          <Col>
+
+  return (
+    <Container fluid>
+      <Row>
+        <Col>
           <h3>Hello, feel free to enter in your name, along with your email and a brief message to send to me if you're interested in acquiring my services!</h3>
-      <form className="form" onSubmit={handleFormSubmit}>
-        
-        <input
-          value={name}
-          name="name"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="name"
-        />
-        <input
-          value={email}
-          name="email"
-          onChange={handleInputChange}
-          type="email"
-          placeholder="email"
-        />
-        <input
-          value={message}
-          name="message"
-          onChange={handleInputChange}
-          type="text"
-          placeholder="message"
-        />
-        <button type="submit">Submit</button>
-      </form>
-      {errorMessage && (
-        <div>
-          <p className="error-text">{errorMessage}</p>
-        </div>
-      )}
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
+          <form className='formField' ref={form} onSubmit={sendEmail}>
+            <div className='sendArea'>
+              <div className='sendCol'>
+                <label>Name</label>
+                <input type="text" name="user_name" />
+                <label>Email</label>
+                <input type="email" name="user_email" />
+              </div>
+              <div className='sendCol'>
+                <label>Message</label>
+                <textarea className="message" />
+              </div>
+            </div>
+            <div className="sendArea"><input className='send' type="submit" value="Send" /></div>
+          </form>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
