@@ -5,9 +5,9 @@ export default function Footer() {
     <Container fluid>
       <Row className='footer justify-content-between align-items-center'>
         <Col>
-         <p><a>img href=""</a>Footer</p>
-         <a href=""><img src=""></img> example 1</a>
-         <p>example</p>
+         <a href="https://github.com/cddoigkn"><img src="./img/github-logo.png" width="50px" height="50px" /> My GitHub!</a>
+         <a href="https://www.linkedin.com/in/caseydoig/"><img src="./img/linkedin.png" width="50px" height="50px"/> My LinkedIn!</a>
+         <p>Last updated 2023.</p>
         </Col>
       </Row>
     </Container>
