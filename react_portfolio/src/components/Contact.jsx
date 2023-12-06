@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div className='sendCol'>
                 <label>Message</label>
-                <textarea className="message" />
+                <textarea className="message" name="message" />
               </div>
             </div>
             <div className="sendArea"><input className='send' type="submit" value="Send" /></div>
