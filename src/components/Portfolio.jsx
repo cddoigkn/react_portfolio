@@ -1,8 +1,7 @@
-import { Container, Row, Col } from 'react-bootstrap'
-import Carousel from 'react-bootstrap/Carousel';
-import Halfofsvg from '../../public/img/halfofsvg';
+import { Container, Row, Col, Carousel } from 'react-bootstrap'
+import Halfofsvg from '../img/halfofsvg.png';
+import Redhalfsvg from '../img/redhalfsvg.png'
 import "bootstrap/dist/css/bootstrap.css";
-import "react-bootstrap-carousel/dist/react-bootstrap-carousel.css";
 
 
 export default function Portfolio() {
@@ -12,21 +11,16 @@ export default function Portfolio() {
         <Col>
           <Carousel>
             <Carousel.Item>
-              < Halfofsvg text="First slide" />
-              <Carousel.Caption>
                 <h3>My Work with SVG</h3>
-                {/* <img src="./img/halfofsvg.png" /> */}
-              </Carousel.Caption>
+<img src={Halfofsvg}/> <img src={Redhalfsvg}/>
             </Carousel.Item>
             <Carousel.Item>
-              <ExampleCarouselImage text="Second slide" />
               <Carousel.Caption>
                 <h3>Second slide label</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-              <ExampleCarouselImage text="Third slide" />
               <Carousel.Caption>
                 <h3>Third slide label</h3>
                 <p>
