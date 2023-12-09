@@ -1,8 +1,40 @@
-# React + Vite
+# React Portfolio
+## Description
+The goal of this assignment was to create a portfolio that is using React instead of the original portfolio that we created that was created using entirely html and a little bit of css! It definitely could use some polishing still but I am proud of it and will continue to work on it once class is over!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+[Install](#install)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Usage](#usage)
+
+[License](#license)
+
+[Contributors](#contributors)
+
+[Tests](#tests)
+
+[Questions](#questions)
+
+## Install
+npm install
+
+## Usage
+It will be used to hopefully get me a job in the future!
+
+## License
+  
+  
+  
+  
+  
+
+## Contributors
+  Casey Doig
+
+## Tests
+  Numerous tests were ran on local servers on my computer in order to make it semi-functional!
+
+## Questions
+  cddoigkn@gmail.com
+  
