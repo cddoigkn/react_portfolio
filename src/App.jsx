@@ -15,6 +15,7 @@ export default function App() {
       <Header />
       <BrowserRouter>
         <Routes>
+           temporary break so nobody hacks my website
           <Route path='/' element={<AboutMe />}/>
           <Route path='/projects' element={<Portfolio />}/>
           <Route path='/contact' element={<Contact />}/>
