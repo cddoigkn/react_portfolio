@@ -6,7 +6,7 @@ import AboutMe from './components/AboutMe'
 import Portfolio from './components/Portfolio'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
-import Contact from './components/Contact'
+// import Contact from './components/Contact'
 
 export default function App() {
 
@@ -15,10 +15,9 @@ export default function App() {
       <Header />
       <BrowserRouter>
         <Routes>
-           temporary break so nobody hacks my website
           <Route path='/' element={<AboutMe />}/>
           <Route path='/projects' element={<Portfolio />}/>
-          <Route path='/contact' element={<Contact />}/>
+          {/* <Route path='/contact' element={<Contact />}/> */}
           <Route path='/resume' element={<Resume />}/>
         </Routes>
       </BrowserRouter>
@@ -26,3 +25,5 @@ export default function App() {
     </>
   )
 }
+
+// Contact page is commented out so that I don't receive spam email at this time. //
